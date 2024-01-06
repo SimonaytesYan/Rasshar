@@ -2,6 +2,8 @@
 #include <stdio.h>
 #include <string.h>
 
+const int k = 10;
+
 struct Human
 {
 
@@ -31,7 +33,7 @@ public :
         printf("Human Drink\n");
     }
 
-    int GetHeight()
+    int GetHeight() const
     { return height; }
 
     void SetHeight(int value)
@@ -107,11 +109,15 @@ public :
 };
 
 int main()
-{
+{ 
     Human* humans[2] = {}; 
+
 
     Russian ivan(190, 90, "Ivan");
     English nick(175, 70, "Nick");
+
+    const Russian& ivan1 = ivan;
+    ivan1.GetHeight();
 
     humans[0] = &ivan;
     humans[1] = &nick;
