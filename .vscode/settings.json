@@ -1,0 +1,9 @@
+{
+    "files.associations": {
+        "*.s": "nasm",
+        "ChangeLog": "plaintext",
+        "*.md": "markdown",
+        "*.h": "c",
+        "typeinfo": "cpp"
+    }
+}
